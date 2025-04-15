@@ -23,12 +23,12 @@
     border-radius: 10px;
     max-height: 500px;
 }
-#content-box::-webkit-scrollbar{
+/* #content-box::-webkit-scrollbar{
     display: none;
-}
+} */
 #name{
-    background-color: white;
-    width: 50%;
+    background-color: #f0f8ff;
+    width: 182px;
     display: flex;
     justify-content: center;
     margin: 10px auto;
@@ -41,7 +41,7 @@
     background-color: #f0f8ff;
     margin: 10px auto;
     border-radius: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 #idea-box{
     margin: 0px auto;
@@ -66,7 +66,7 @@
     justify-content: center;
     gap:50px;
     background-color: white;
-    width: 40%;
+    width: 280px;
     margin: 20px auto;
     padding: 5px 0px;
     border-radius: 50px;
@@ -107,7 +107,8 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 30%;
+    width: 320px;
+    margin: auto;
 
 }
 .label-content{
@@ -154,7 +155,56 @@ input::placeholder{
     transform: scale(0.98);
     background: linear-gradient(to left,#a0a8fd,#6d77ff);
 }
+.endline{
+    padding-top: 20px;
+}
 a{
     text-decoration: none;
 }
-  
+@media only screen and (max-width:455px){
+
+}
+
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(3px);
+}
+
+/* Position and size your bubbles */
+.bubble1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: -100px;
+}
+
+.bubble2 {
+    width: 250px;
+    height: 250px;
+    bottom: -50px;
+    right: -80px;
+}
+
+.bubble3 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: 10%;
+}
+
+/* Make sure content stays above the bubbles */
+#main-container {
+    position: relative;
+    z-index: 1;
+}
